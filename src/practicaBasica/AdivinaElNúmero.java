@@ -3,20 +3,15 @@ import java.util.Scanner;
 public class AdivinaElNúmero {
 
 	public static void main(String[] args) {
-		imprimir("  EL NUMERO MISTERIOSO  ");
-		imprimir("  == ====== ==========  ");
 		/*Codigo Spaguetti*/
 		Scanner sc = new Scanner(System.in);
 		//Declaracion
 		int dificultad=0, cant=0,intentos=0,respuesta = 0;
+		imprimir("  EL NUMERO MISTERIOSO  ");
+		imprimir("  == ====== ==========  ");
+		consultaDificultad();
+		dificultad = sc.nextInt();
 		do {
-			//Impresion de la dificultad
-			imprimir("Escoja su dificultad");
-			imprimir("1: Facil");
-			imprimir("2: Medio");
-			imprimir("3: Dificil");
-			imprimir("4: Personalizar");
-			dificultad = sc.nextInt();
 			//While para validar el dato de entrada
 			while(dificultad>=5) {
 				imprimir("Inserte un numero valido");
@@ -94,5 +89,12 @@ public class AdivinaElNúmero {
 		imprimir("¿Desea jugar de nuevo?");
 		imprimir("1: Si");
 		imprimir("0: No");
+	}
+	static void consultaDificultad() {
+		imprimir("Escoja su dificultad");
+		imprimir("1: Facil");
+		imprimir("2: Medio");
+		imprimir("3: Dificil");
+		imprimir("4: Personalizado");
 	}
 }
